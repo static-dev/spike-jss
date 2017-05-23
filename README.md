@@ -1,5 +1,7 @@
 # Spike JSS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/static-dev/spike-jss.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/spike-jss.svg?style=flat-square)](https://npmjs.com/package/spike-jss)
 [![tests](https://img.shields.io/travis/static-dev/spike-jss.svg?style=flat-square)](https://travis-ci.org/static-dev/spike-jss?branch=master)
 [![dependencies](https://img.shields.io/david/static-dev/spike-jss.svg?style=flat-square)](https://david-dm.org/static-dev/spike-jss)
