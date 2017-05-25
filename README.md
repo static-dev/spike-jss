@@ -17,7 +17,7 @@ A simple static render for jss.
 
 ```js
 // app.js
-jss({
+new Jss({
   files: 'assets/jss/*.js',
   output: 'css/main.css'
 })
@@ -39,7 +39,7 @@ This plugin is built with the ability to extract critical css in any way you'd l
 
 ```js
 // app.js
-jss({
+new Jss({
   files: 'assets/jss/*.js',
   output: 'css/main.css',
   extract: {
