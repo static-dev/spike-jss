@@ -22,6 +22,8 @@ test('basic', (t) => {
   })
 })
 
+test.todo('configurable via options')
+
 //
 // utilities
 //

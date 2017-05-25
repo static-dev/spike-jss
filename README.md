@@ -17,9 +17,12 @@ A simple static render for jss.
 
 ```js
 // app.js
+const jssPreset = require('jss-preset-default')
+
 new Jss({
   files: 'assets/jss/*.js',
-  output: 'css/main.css'
+  output: 'css/main.css',
+  options: jssPreset()
 })
 ```
 
