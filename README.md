@@ -48,6 +48,8 @@ export default () => {
 
 ### Extractions & Critical CSS
 
+> **NOTE:** This feature hasn't been built yet, but will be soon!
+
 This plugin is built with the ability to extract critical css in any way you'd like, but it won't do it for you using phantomjs etc because everyone has a different size screen and as such this is a very imprecise method. You can do something like this to extract chunks of css:
 
 ```js
