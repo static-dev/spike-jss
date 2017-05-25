@@ -26,9 +26,22 @@ new Jss({
 With this config, you get your jss files processed and the stylesheet output to the path as specified. In order to access the classes, you will need to `require` or `import` the jss files into a component - they will be imported as a jss stylesheet by default. Here's an example with react:
 
 ```js
-import sheet from '../jss/hero'
+import {classes} from '../jss/hero'
 
 export default () => {
+  return (<p className={classes.hello}>Hello world!</p>)
+}
+```
+
+If you need to use interactive styles through jss, the currently recommended method by jss is to [regenerate styles from your jss and remove the server-rendered styles](http://cssinjs.org/server-side-rendering/) rather than rehydrating existing styles. You can do this as you normally would in jss, and you can get your jss source by importing `rules` from the module.
+
+```js
+import jss from 'jss'
+import {rules} from '../jss/hero'
+
+export default () => {
+  const sheet = jss.createStyleSheet(rules)
+  sheet.attach()
   return (<p className={sheet.classes.hello}>Hello world!</p>)
 }
 ```
@@ -53,7 +66,7 @@ new Jss({
 
 You can find the extracted css chunks on your locals object under `_extractedCss` followed by the key you used for the extraction chunk. So for example you might do this in your layout:
 
-```
+```jade
 html
   head
     title My cool demo page
@@ -69,7 +82,7 @@ html
 
 And this in the index file (sugarml):
 
-```
+```jade
 block css
   style {{ _extractedCss.index }}
 block content
