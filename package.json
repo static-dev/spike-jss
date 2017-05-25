@@ -2,11 +2,15 @@
   "name": "spike-jss",
   "description": "simple static render for jss",
   "version": "0.0.0",
-  "author": "static-dev",
+  "author": "Jeff Escalante",
   "ava": {
     "verbose": "true"
   },
   "bugs": "https://github.com/static-dev/spike-jss/issues",
+  "dependencies": {
+    "jss": "^7.1.2",
+    "spike-util": "^1.2.0"
+  },
   "devDependencies": {
     "ava": "^0.19.1",
     "codecov": "^2.1.0",
@@ -29,9 +33,5 @@
     "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
     "lint": "standard | snazzy",
     "test": "nyc ava"
-  },
-  "dependencies": {
-    "jss": "^7.1.2",
-    "spike-util": "^1.2.0"
   }
 }
